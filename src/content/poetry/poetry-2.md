@@ -1,6 +1,6 @@
 ---
 # title: 
-description: An ode to the year
+description: An ode to the year. The vicissitudes of shadows that followed around darkened the words. Ephemerality of conversations flickered the pavement.
 publishDate: 'December 31 2024'
 isFeatured: true
 tag:

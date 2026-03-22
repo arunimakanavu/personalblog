@@ -1,6 +1,6 @@
 ---
 #title: 
-description: An ocean, I am
+description: An ocean, I am, of depths, of trenches, of mysteries, of existence, of beats, of poetry, of darkness.
 publishDate: 'March 18 2024'
 isFeatured: true
 tag:
