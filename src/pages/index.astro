@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import Button from '../components/Button.astro';
+import Hero from '../components/Hero.astro';
+import PostPreview from '../components/PostPreview.astro';
+import MusingPreview from '../components/MusingPreview.astro';
+import PoetryPreview from '../components/PoetryPreview.astro';
+import siteConfig from '../data/site-config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sortItemsByDateDesc } from '../utils/data-utils';
+
+const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
+const featuredPosts = posts.filter(({ data }) => data.isFeatured);
+
+const musings = (await getCollection('musings')).sort(sortItemsByDateDesc);
+const featuredMusings = musings.filter(({ data }) => data.isFeatured);
+
+const poetries = (await getCollection('poetry')).sort(sortItemsByDateDesc);
+const featuredPoetries = poetries.filter(({ data }) => data.isFeatured);
+---
+
+<BaseLayout description={siteConfig.description}>
+    <Hero {...siteConfig.hero} />
+    {
+        featuredPosts?.length > 0 && (
+            <div class="mb-16 sm:mb-24">
+                <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Featured Posts</h2>
+                {featuredPosts.map((post) => (
+                    <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
+                ))}
+                <div class="mt-12 sm:mt-16">
+                    <Button href="/blog">View All Posts</Button>
+                </div>
+            </div>
+        )
+    }
+    {
+        featuredMusings?.length > 0 && (
+            <div class="mb-16 sm:mb-24">
+                <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Musings</h2>
+                {featuredMusings.map((musing) => (
+                    <MusingPreview musing={musing} class="mb-10 sm:mb-12" headingLevel="h3" />
+                ))}
+                <div class="mt-12 sm:mt-16">
+                    <Button href="/musings">View All Musings</Button>
+                </div>
+            </div>
+        )
+    }
+    {
+        featuredPoetries?.length > 0 && (
+            <div class="mb-16 sm:mb-24">
+                <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Poetry</h2>
+                {featuredPoetries.map((poetry) => (
+                    <PoetryPreview poetry={poetry} class="mb-10 sm:mb-12" headingLevel="h3" />
+                ))}
+                <div class="mt-12 sm:mt-16">
+                    <Button href="/poetry">View All Poetry</Button>
+                </div>
+            </div>
+        )
+    }
+</BaseLayout>

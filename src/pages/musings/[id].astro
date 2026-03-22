@@ -1,0 +1,51 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import MusingPreview from '../../components/MusingPreview.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { sortItemsByDateDesc } from '../../utils/data-utils';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+    const musings = (await getCollection('musings')).sort(sortItemsByDateDesc);
+    const musingCount = musings.length;
+    return musings.map((musing, index) => ({
+        params: { id: musing.id },
+        props: {
+            musing,
+            prevMusing: index + 1 !== musingCount ? musings[index + 1] : null,
+            nextMusing: index !== 0 ? musings[index - 1] : null
+        }
+    }));
+}
+
+type Props = {
+    musing: CollectionEntry<'musings'>;
+    prevMusing: CollectionEntry<'musings'> | null;
+    nextMusing: CollectionEntry<'musings'> | null;
+};
+
+const { musing, prevMusing, nextMusing } = Astro.props;
+const { title, description, seo } = musing.data;
+const { Content } = await render(musing);
+---
+
+<BaseLayout title={seo?.title ?? title} description={seo?.description ?? description} image={seo?.image} pageType="article" showHeader={false}>
+    <article class="mb-16 sm:mb-24">
+        <header class="mb-8">
+            <h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">{title}</h1>
+        </header>
+        <div class="prose sm:prose-lg max-w-none">
+            <Content />
+        </div>
+    </article>
+    {
+        (prevMusing || nextMusing) && (
+            <div class="my-16 sm:my-24">
+                <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">View Next</h2>
+                {nextMusing && <MusingPreview musing={nextMusing} class="mb-10 sm:mb-12" headingLevel="h3" />}
+                {prevMusing && <MusingPreview musing={prevMusing} class="mb-10 sm:mb-12" headingLevel="h3" />}
+            </div>
+        )
+    }
+</BaseLayout>
