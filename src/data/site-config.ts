@@ -67,7 +67,7 @@ const siteConfig: SiteConfig = {
     ],
     hero: {
         title: 'Achromatic Inkpot',
-        text: "*My brain hums with the scraps of poetry and madness - Virginia Woolf*",
+        text: "*Prima donna of mistuned symphonies. A poetry of boundless interpretations. An art that will never fit in a canvas. A medley of hues. Dusk with perplexing aesthetics. Perturbed reticence. Fathomless emotions. Vicissitudes, the many. Her arrogance is her elegance. Her brain hums with the scraps of poetry and madness as the poet says. Life revolves around Poetry, Physics, Technology, Birds and Butterflies.*",
         // image: {
         //     src: hero,
         //     alt: 'A person sitting at a desk in front of a computer'
