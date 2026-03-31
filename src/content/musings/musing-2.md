@@ -2,7 +2,7 @@
 title: 'I had a dream last night.'
 description: I was back at my school.Not unlike the old days, I have been constantly questioned about my performance, exams scores, the pretentious occurance of "luck" in every exams I scored well, the laziness to use my "real potential" for every exams I scored poorly.
 publishDate: 'November 17 2025'
-isFeatured: true
+# isFeatured: true
 tag:
 - Thought Letters
 ---

@@ -2,7 +2,7 @@
 title: "21 Days of Healing - Notes from a Mental Health Asylum"
 description: I miss having a room to write, to think, and to cry. I am under constant watch - restricted, analyzed, documented and studied.
 publishDate: 'March 30 2026'
-# isFeatured: true
+isFeatured: true
 tag:
 - Thought Letters
 ---
