@@ -25,11 +25,11 @@ const siteConfig: SiteConfig = {
             href: '/blog'
         },
         {
-            text: 'Musings',
+            text: 'Thought Letters',
             href: '/musings'
         },
         {
-            text: 'Poetry',
+            text: 'Prose and Poetry',
             href: '/poetry'
         },
         {

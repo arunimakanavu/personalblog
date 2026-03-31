@@ -20,8 +20,8 @@ const { page } = Astro.props;
 const portfolio = page.data;
 ---
 
-<BaseLayout title="Poetry" description="Explore my poems and thought letters" showHeader={false}>
-    <h1 class="mb-12 font-serif text-2xl leading-tight italic sm:mb-16 sm:text-4xl">Poetry</h1>
+<BaseLayout title="Prose and Poetry" description="Explore my poems and thought letters" showHeader={false}>
+    <h1 class="mb-12 font-serif text-2xl leading-tight italic sm:mb-16 sm:text-4xl">Prose and Poetry</h1>
     {portfolio.map((poetry) => <PoetryPreview poetry={poetry} class="mb-10 sm:mb-12" />)}
     <Pagination page={page} class="my-16 sm:my-24" />
 </BaseLayout>

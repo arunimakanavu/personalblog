@@ -22,27 +22,19 @@ const featuredPoetries = poetries.filter(({ data }) => data.isFeatured);
 <BaseLayout description={siteConfig.description}>
     <Hero {...siteConfig.hero} />
     {
-        featuredPosts?.length > 0 && (
-            <div class="mb-16 sm:mb-24">
-                <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Featured Posts</h2>
-                {featuredPosts.map((post) => (
-                    <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
-                ))}
-                <div class="mt-12 sm:mt-16">
-                    <Button href="/blog">View All Posts</Button>
-                </div>
-            </div>
+        (featuredMusings?.length > 0 || featuredPoetries?.length > 0 || featuredPosts?.length > 0) && (
+            <h2 class="mb-12 font-serif text-3xl italic sm:mb-16 sm:text-4xl mt-16 sm:mt-24">Featured</h2>
         )
     }
     {
         featuredMusings?.length > 0 && (
             <div class="mb-16 sm:mb-24">
-                <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Musings</h2>
+                <h3 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Thought Letters</h3>
                 {featuredMusings.map((musing) => (
                     <MusingPreview musing={musing} class="mb-10 sm:mb-12" headingLevel="h3" />
                 ))}
                 <div class="mt-12 sm:mt-16">
-                    <Button href="/musings">View All Musings</Button>
+                    <Button href="/musings">View All Thought Letters</Button>
                 </div>
             </div>
         )
@@ -50,12 +42,25 @@ const featuredPoetries = poetries.filter(({ data }) => data.isFeatured);
     {
         featuredPoetries?.length > 0 && (
             <div class="mb-16 sm:mb-24">
-                <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Poetry</h2>
+                <h3 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Prose and Poetry</h3>
                 {featuredPoetries.map((poetry) => (
                     <PoetryPreview poetry={poetry} class="mb-10 sm:mb-12" headingLevel="h3" />
                 ))}
                 <div class="mt-12 sm:mt-16">
-                    <Button href="/poetry">View All Poetry</Button>
+                    <Button href="/poetry">View All Prose and Poetry</Button>
+                </div>
+            </div>
+        )
+    }
+    {
+        featuredPosts?.length > 0 && (
+            <div class="mb-16 sm:mb-24">
+                <h3 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">Tech</h3>
+                {featuredPosts.map((post) => (
+                    <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
+                ))}
+                <div class="mt-12 sm:mt-16">
+                    <Button href="/blog">View All Tech Posts</Button>
                 </div>
             </div>
         )
