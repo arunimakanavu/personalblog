@@ -1,7 +1,7 @@
 ---
 title: On Overthinking
-description: 
-publishDate: 'April 3 2026'
+description: I often wonder what matters in an interpersonal connection - physical or emotional availability? Perhaps what should matter more? This is something that I should ask myself, not as a receiver,but as a giver too. 
+publishDate: April 3 2026
 tag:
 - Thought Letters
 
