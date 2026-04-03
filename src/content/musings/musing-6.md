@@ -6,7 +6,7 @@ tag:
 - Thought Letters
 
 
-----
+---
 
 I often wonder what matters in an interpersonal connection - physical or emotional availability? Perhaps what should matter more? This is something that I should ask myself, not as a receiver,but as a giver too. 
 
