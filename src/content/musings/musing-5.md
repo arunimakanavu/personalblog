@@ -32,3 +32,6 @@ I was thirteen years old when I read Sylvia Plath for the first time. To this da
 Nevertheless I still write to her, knowing, believing she understands me. 
 
 Fast forwarding through this battleground to 2026, I am here at National Institute of Mental Health and Neuro Science, Bengaluru - in a special ward, surrounded by walls, meshes, grills and latch-less doors.
+
+## 4. Day 1
+
