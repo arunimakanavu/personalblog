@@ -67,7 +67,7 @@ const siteConfig: SiteConfig = {
     ],
     hero: {
         title: 'Achromatic Inkpot',
-        text: "*Prima donna of mistuned symphonies. A poetry of boundless interpretations. An art that will never fit in a canvas. A medley of hues. Dusk with perplexing aesthetics. Perturbed reticence. Fathomless emotions. Vicissitudes, the many. Her arrogance is her elegance. Her brain hums with the scraps of poetry and madness as the poet says. Life revolves around Poetry, Physics, Technology, Birds and Butterflies.*",
+        text: "*...at times I feel so restricted inside this \"solidity\" of my own shape, that I'm not able to flow out like a mountain side avalanche when summer hits...",
         // image: {
         //     src: hero,
         //     alt: 'A person sitting at a desk in front of a computer'
