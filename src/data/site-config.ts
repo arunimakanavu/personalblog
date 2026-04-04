@@ -67,7 +67,7 @@ const siteConfig: SiteConfig = {
     ],
     hero: {
         title: 'Achromatic Inkpot',
-        text: "*...at times I feel so restricted inside this \"solidity\" of my own shape, that I'm not able to flow out like a mountain side avalanche when summer hits...",
+        text: "*...at times I feel so restricted inside this \"solidity\" of my own shape, that I'm not able to flow out like a mountain side avalanche when summer hits...*",
         // image: {
         //     src: hero,
         //     alt: 'A person sitting at a desk in front of a computer'
